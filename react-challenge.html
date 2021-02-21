@@ -35,24 +35,27 @@
 
         handleMoodOptions = () => {
           let randomIndex = Math.floor(Math.random() * this.state.moods.length )
-          this.setState({ currentMood: moods[randomIndex] })
+          this.setState({ currentMood: this.state.moods[randomIndex] })
+          //changed moods[randomIndex] to this.state.moods[randomIndex]
         }
 
         render(){
           return(
-
+          //placed tick marks around entire return section
+          //changed handleMoodOptions to this.handleMoodOptions
+            <>
               <h1>Welcome to the Mood Meter App</h1>
 
               <h3>Mood Options:</h3>
 
-              <div style={{ fontSize: "40px", height: "50px"}}>
+                <div style={{ fontSize: "40px", height: "50px"}}>
                 { this.state.currentMood }
-              </div>
+                </div>
 
-              <button onClick={ handleMoodOptions }>
+              <button onClick={ this.handleMoodOptions }>
                 Click Here For Next Mood option
               </button>
-
+            </>
           )
         }
       }
