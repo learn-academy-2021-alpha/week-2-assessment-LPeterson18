@@ -36,7 +36,7 @@ var num3 = -7
 // Expected output: "-7 is not divisible by three"
 
 describe("When divisibleByThree is called", () => {
-  it("return `num1 is divisible by three` when num1 called is divisible by three",() => {
+  it("return `15 is divisible by three` when 15 called is divisible by three",() => {
     //arrange
     const argument = num1
     //act
@@ -44,7 +44,7 @@ describe("When divisibleByThree is called", () => {
     //assert
   expect(actualResult).toEqual(`${argument} is divisible by three`)
 })
-  it("return `num2 is divisible by three` when num2 is called",() => {
+  it("return `0 is divisible by three` when 0 is called",() => {
     //arrange
     const argument = num2
     //act
@@ -52,7 +52,7 @@ describe("When divisibleByThree is called", () => {
     //assert
   expect(actualResult).toEqual(`${argument} is divisible by three`)
   })
-  it("return `num3 is not divisible by three` when num3 called is not divisible by three",() => {
+  it("return `-7 is not divisible by three` when -7 called is not divisible by three",() => {
     //arrange
     const argument = num3
     //act
@@ -170,7 +170,8 @@ describe("When numberSorter is called", () => {
 const numberSorter = (array) => {
   return array.filter(value => {
     return typeof value === "number"
-  }).sort(function(a, b){return a-b})
+  }).sort((a, b) => a-b)
+//In order to sort correctly have to use the function keyword to define a function within .sort.  This allows for
 }
 
 
@@ -182,8 +183,9 @@ const numberSorter = (array) => {
 //create a function
 //argument is a string
 //let variable equal string.split into array
-// while loop to check each value === set of vowels
-//return index of first vowel and end while loop
+// while loop runs for length of string to check each letter if value === set of vowels
+//if it does return index of first vowel and end while loop
+//else increment i
 
 // a) Create a test with expect statements for each of the variables provided.
 
